@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 helm repo add gremlin https://helm.gremlin.com/
 kubectl create namespace gremlin
 helm install gremlin gremlin/gremlin --namespace gremlin \
