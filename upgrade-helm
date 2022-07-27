@@ -1,0 +1,9 @@
+helm upgrade gremlin gremlin/gremlin --namespace gremlin     
+--set gremlin.hostPID=true     
+--set gremlin.container.driver=docker-runc     
+--set gremlin.collect.processes=true     
+--set gremlin.secret.managed=true     
+--set gremlin.secret.type=secret     
+--set gremlin.secret.teamID=$GREMLIN_TEAM_ID     
+--set gremlin.secret.clusterID=$GREMLIN_CLUSTER_ID     
+--set gremlin.secret.teamSecret=$GREMLIN_TEAM_SECRET
