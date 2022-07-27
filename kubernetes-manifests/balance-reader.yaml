@@ -42,9 +42,9 @@ spec:
           value: "8080"
         # toggle Cloud Trace export
         - name: ENABLE_TRACING
-          value: "true"
+          value: "false"
         - name: ENABLE_METRICS
-          value: "true"
+          value: "false"
         - name: POLL_MS
           value: "100"
         - name: CACHE_SIZE
@@ -80,13 +80,13 @@ spec:
           initialDelaySeconds: 60
           periodSeconds: 5
           timeoutSeconds: 10
-        livenessProbe:
-          httpGet:
-            path: /healthy
-            port: 8080
-          initialDelaySeconds: 120
-          periodSeconds: 5
-          timeoutSeconds: 10
+        #livenessProbe:
+        # httpGet:
+        #   path: /healthy
+        #   port: 8080
+        # initialDelaySeconds: 120
+        # periodSeconds: 5
+        # timeoutSeconds: 10
       volumes:
       - name: publickey
         secret:
