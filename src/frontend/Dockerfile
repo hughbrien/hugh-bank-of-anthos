@@ -31,27 +31,12 @@ ENV VIRTUAL_ENV /env
 ENV PATH /env/bin:$PATH
 
 # explicitly set a fallback log level in case no log level is defined by Kubernetes
-ENV LOG_LEVEL debug
-
-
+ENV LOG_LEVEL info
 
 RUN /env/bin/python -m pip install --upgrade pip
-
-RUN pip install instana
-
 # Install dependencies.
 ADD requirements.txt /app/requirements.txt
 RUN pip install -r /app/requirements.txt
-
-
-# This is a workaround to use an unreleased version of grpcio, so that the cloud trace exporter and the OpenTelemetry RequestsInstrumentor do not create an infinite request loop.
-RUN pip install --pre --upgrade --force-reinstall --extra-index-url \
-    https://packages.grpc.io/archive/2020/06/635ded1749f990ffe6be0ca403e4b255cf62742f-983cbea2-bebc-4777-911c-14e4cb494b92/python \
-    grpcio \
-
-RUN mkdir /app
-RUN mkdir /app/static
-RUN mkdir /app/templates
 
 # Add application code.
 ADD static /app/static
