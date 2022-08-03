@@ -1,0 +1,168 @@
+{
+  "id": "d68e01ef-85c1-415e-911e-f76ab31a0d45",
+  "version": "2.0",
+  "name": "Hipster Test",
+  "url": "http://a60bc3884ec404950b8cbee478aee423-794781441.us-east-2.elb.amazonaws.com:8080",
+  "tests": [{
+    "id": "592b5485-8cfb-4207-b17e-1958501e561b",
+    "name": "Login and Tranaction History",
+    "commands": [{
+      "id": "d1020fe2-b83b-483f-bed0-ffb80be2eb5d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "738bb882-aae2-4ec0-9d0a-c0fdcfa640c9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1217x790",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e898228-4925-4088-aa32-2462b28e2986",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-sign-in",
+      "targets": [
+        ["css=.btn-sign-in", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "322b677b-4ea7-4866-8187-76233fd9f17a",
+      "comment": "",
+      "command": "click",
+      "target": "id=depositSpan",
+      "targets": [
+        ["id=depositSpan", "id"],
+        ["css=#depositSpan", "css:finder"],
+        ["xpath=//span[@id='depositSpan']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Deposit Funds')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bec51940-8d06-4401-8e8d-2d23dead9fa5",
+      "comment": "",
+      "command": "click",
+      "target": "id=deposit-amount",
+      "targets": [
+        ["id=deposit-amount", "id"],
+        ["name=amount", "name"],
+        ["css=#deposit-amount", "css:finder"],
+        ["xpath=//input[@id='deposit-amount']", "xpath:attributes"],
+        ["xpath=//form[@id='deposit-form']/div[2]/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "93e8f173-3379-49cb-8dc7-1c63dc222d21",
+      "comment": "",
+      "command": "type",
+      "target": "id=deposit-amount",
+      "targets": [
+        ["id=deposit-amount", "id"],
+        ["name=amount", "name"],
+        ["css=#deposit-amount", "css:finder"],
+        ["xpath=//input[@id='deposit-amount']", "xpath:attributes"],
+        ["xpath=//form[@id='deposit-form']/div[2]/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "11"
+    }, {
+      "id": "3792d896-cf77-4ba3-af75-b30bdecbd7ae",
+      "comment": "",
+      "command": "click",
+      "target": "css=#deposit-form .btn-primary",
+      "targets": [
+        ["css=#deposit-form .btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='deposit-form']/div[3]/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Deposit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f3c0018-2e48-4012-bd15-9e625b60f4c6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign out",
+      "targets": [
+        ["linkText=Sign out", "linkText"],
+        ["css=.dropdown-item", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign out')]", "xpath:link"],
+        ["xpath=//a[@onclick=\"document.querySelector('#logout-form').submit();\"]", "xpath:attributes"],
+        ["xpath=//form[@id='logout-form']/a", "xpath:idRelative"],
+        ["xpath=//form/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "53a2d182-fae2-4df6-adc7-36ebf74f3b92",
+      "comment": "",
+      "command": "click",
+      "target": "id=paymentSpan",
+      "targets": [
+        ["id=paymentSpan", "id"],
+        ["css=#paymentSpan", "css:finder"],
+        ["xpath=//span[@id='paymentSpan']", "xpath:attributes"],
+        ["xpath=//div[3]/div/div/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Send Payment')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c739f8f-1a7a-431f-bfb3-b782dd819ad0",
+      "comment": "",
+      "command": "click",
+      "target": "id=payment-amount",
+      "targets": [
+        ["id=payment-amount", "id"],
+        ["css=#payment-amount", "css:finder"],
+        ["xpath=//input[@id='payment-amount']", "xpath:attributes"],
+        ["xpath=//form[@id='payment-form']/div[2]/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/form/div[2]/div/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c96d65b-3999-4086-90e6-639c8837d65c",
+      "comment": "",
+      "command": "type",
+      "target": "id=payment-amount",
+      "targets": [
+        ["id=payment-amount", "id"],
+        ["css=#payment-amount", "css:finder"],
+        ["xpath=//input[@id='payment-amount']", "xpath:attributes"],
+        ["xpath=//form[@id='payment-form']/div[2]/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/form/div[2]/div/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "112"
+    }, {
+      "id": "dce82e9b-2c68-44ac-b339-e6076058f0a9",
+      "comment": "",
+      "command": "click",
+      "target": "css=#payment-form .btn-primary",
+      "targets": [
+        ["css=#payment-form .btn-primary", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='payment-form']/div[3]/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/form/div[3]/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Send')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "b68c7d5b-5aed-470c-a1b2-f87ad5740d01",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://a1710d67c8536401b8698da4f6255169-106694761.us-east-2.elb.amazonaws.com/", "http://a60bc3884ec404950b8cbee478aee423-794781441.us-east-2.elb.amazonaws.com:8080/"],
+  "plugins": []
+}
