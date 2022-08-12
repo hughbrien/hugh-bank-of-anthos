@@ -138,6 +138,6 @@ wrapt==1.14.0
     #   opentelemetry-instrumentation
     #   opentelemetry-instrumentation-jinja2
     #   opentelemetry-instrumentation-sqlalchemy
-
+instana==1.37.4
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools

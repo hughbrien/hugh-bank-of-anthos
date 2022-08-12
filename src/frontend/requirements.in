@@ -11,3 +11,4 @@ opentelemetry-instrumentation-flask==0.13b0
 opentelemetry-instrumentation-sqlalchemy==0.13b0
 opentelemetry-instrumentation-jinja2==0.13b0
 opentelemetry-instrumentation-requests==0.13b0
+instana==1.37.4
