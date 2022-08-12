@@ -30,14 +30,14 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: front
-        image: public.ecr.aws/z6u6t6j2/frontend:1.1.6
+        image: public.ecr.aws/z6u6t6j2/frontend:1.1.8
         volumeMounts:
         - name: publickey
           mountPath: "/root/.ssh"
           readOnly: true
         env:
         - name: VERSION
-          value: "v1.1.6"
+          value: "v1.1.8"
         - name: PORT
           value: "8080"
         - name: ENABLE_TRACING
