@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export VERSION=1.1.9
+export VERSION=1.1.11
 # aws ecr-public get-login-password --region us-east-1 | sudo docker login --username AWS --password-stdin public.ecr.aws/z6u6t6j2
 
 sudo docker build . --tag frontend:${VERSION}

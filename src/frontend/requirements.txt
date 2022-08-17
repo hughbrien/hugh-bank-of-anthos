@@ -4,6 +4,9 @@
 #
 #    pip-compile
 #
+
+instana==1.37.4
+
 cachetools==4.2.4
     # via google-auth
 certifi==2021.10.8
