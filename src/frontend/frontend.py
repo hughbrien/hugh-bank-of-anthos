@@ -14,6 +14,7 @@
 
 """Web service for frontend
 """
+import instana
 
 import datetime
 import json
