@@ -1,0 +1,181 @@
+{
+  "id": "d68e01ef-85c1-415e-911e-f76ab31a0d45",
+  "version": "2.0",
+  "name": "Hipster Test",
+  "url": "http://hughbrien.gremlin.rocks:8080",
+  "tests": [{
+    "id": "592b5485-8cfb-4207-b17e-1958501e561b",
+    "name": "Login and Tranaction History",
+    "commands": [{
+      "id": "7161b778-eaed-4134-ad1a-cf79f5953db0",
+      "comment": "",
+      "command": "open",
+      "target": "/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "76764c0e-0706-45d0-bbd7-e989799f5dbe",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1217x790",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a177456d-aa1a-4741-9f5d-b6d73ca37a51",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-sign-in",
+      "targets": [
+        ["css=.btn-sign-in", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1279799-1412-4cf3-93e3-37a2ac038840",
+      "comment": "",
+      "command": "click",
+      "target": "id=depositSpan",
+      "targets": [
+        ["id=depositSpan", "id"],
+        ["css=#depositSpan", "css:finder"],
+        ["xpath=//span[@id='depositSpan']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Deposit Funds')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff0f7218-ac6e-48da-ba23-82c7d1972892",
+      "comment": "",
+      "command": "click",
+      "target": "id=deposit-amount",
+      "targets": [
+        ["id=deposit-amount", "id"],
+        ["name=amount", "name"],
+        ["css=#deposit-amount", "css:finder"],
+        ["xpath=//input[@id='deposit-amount']", "xpath:attributes"],
+        ["xpath=//form[@id='deposit-form']/div[2]/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "878ff322-0a89-4021-9db0-594a4b3eb6fd",
+      "comment": "",
+      "command": "type",
+      "target": "id=deposit-amount",
+      "targets": [
+        ["id=deposit-amount", "id"],
+        ["name=amount", "name"],
+        ["css=#deposit-amount", "css:finder"],
+        ["xpath=//input[@id='deposit-amount']", "xpath:attributes"],
+        ["xpath=//form[@id='deposit-form']/div[2]/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "88"
+    }, {
+      "id": "7f0994d1-f5fc-4aca-a9e5-3dad83222759",
+      "comment": "",
+      "command": "click",
+      "target": "css=#deposit-form .btn-primary",
+      "targets": [
+        ["css=#deposit-form .btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='deposit-form']/div[3]/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Deposit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d9a06068-027a-4d9e-b2b8-2d9ec4aa7ad8",
+      "comment": "",
+      "command": "click",
+      "target": "id=paymentSpan",
+      "targets": [
+        ["id=paymentSpan", "id"],
+        ["css=#paymentSpan", "css:finder"],
+        ["xpath=//span[@id='paymentSpan']", "xpath:attributes"],
+        ["xpath=//div[3]/div/div/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Send Payment')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "276f17d3-f8c8-4490-9369-4f17711a84ea",
+      "comment": "",
+      "command": "click",
+      "target": "id=payment-amount",
+      "targets": [
+        ["id=payment-amount", "id"],
+        ["css=#payment-amount", "css:finder"],
+        ["xpath=//input[@id='payment-amount']", "xpath:attributes"],
+        ["xpath=//form[@id='payment-form']/div[2]/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/form/div[2]/div/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "159ee332-69a5-46f9-ad25-363c8b910829",
+      "comment": "",
+      "command": "type",
+      "target": "id=payment-amount",
+      "targets": [
+        ["id=payment-amount", "id"],
+        ["css=#payment-amount", "css:finder"],
+        ["xpath=//input[@id='payment-amount']", "xpath:attributes"],
+        ["xpath=//form[@id='payment-form']/div[2]/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/form/div[2]/div/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "8"
+    }, {
+      "id": "709ee5eb-b6db-4879-844b-1b710c916bba",
+      "comment": "",
+      "command": "click",
+      "target": "css=#payment-form .btn-primary",
+      "targets": [
+        ["css=#payment-form .btn-primary", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='payment-form']/div[3]/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/form/div[3]/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Send')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e98a67b-4065-4b4e-97cb-954aaa488cb8",
+      "comment": "",
+      "command": "click",
+      "target": "id=account-user-name",
+      "targets": [
+        ["id=account-user-name", "id"],
+        ["css=#account-user-name", "css:finder"],
+        ["xpath=//span[@id='account-user-name']", "xpath:attributes"],
+        ["xpath=//a[@id='accountDropdown']/span/span", "xpath:idRelative"],
+        ["xpath=//span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "037a9c56-07a0-4f35-a8ea-1cc58891c259",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign out",
+      "targets": [
+        ["linkText=Sign out", "linkText"],
+        ["css=.dropdown-item", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign out')]", "xpath:link"],
+        ["xpath=//a[@onclick=\"document.querySelector('#logout-form').submit();\"]", "xpath:attributes"],
+        ["xpath=//form[@id='logout-form']/a", "xpath:idRelative"],
+        ["xpath=//form/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "b68c7d5b-5aed-470c-a1b2-f87ad5740d01",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://a1710d67c8536401b8698da4f6255169-106694761.us-east-2.elb.amazonaws.com/", "http://a60bc3884ec404950b8cbee478aee423-794781441.us-east-2.elb.amazonaws.com:8080/", "http://acfcd765abb3a4f918658e64d32dab28-575456436.us-west-1.elb.amazonaws.com:8080/", "http://hughbrien.gremlin.rocks:8080/"],
+  "plugins": []
+}

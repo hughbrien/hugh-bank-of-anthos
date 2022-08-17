@@ -1,0 +1,39 @@
+{
+  "restricted_roles": null,
+  "tags": [
+    "cluster-name:hugh-bank-of-anthos",
+    "env:testing",
+    "probe_dc:aws:us-east-1",
+    "check_type:api",
+    "check_status:live"
+  ],
+  "deleted": null,
+  "query": "no_query",
+  "message": "",
+  "id": 79565398,
+  "multi": false,
+  "name": "[Synthetics] Test on hughbrien.gremlin.rocks:8080/home",
+  "created": "2022-08-09T14:32:48.990231+00:00",
+  "created_at": 1660055568000,
+  "creator": {
+    "id": 4239245,
+    "handle": "hugh.brien@gremlin.com",
+    "name": "Hugh Brien",
+    "email": "hugh.brien@gremlin.com"
+  },
+  "org_id": 154020,
+  "modified": "2022-08-09T14:32:48.990231+00:00",
+  "priority": null,
+  "overall_state_modified": "2022-08-09T14:32:59+00:00",
+  "overall_state": "OK",
+  "type": "synthetics alert",
+  "options": {
+    "notify_audit": false,
+    "synthetics_check_id": "u43-r5y-4v2",
+    "silenced": {},
+    "include_tags": true,
+    "new_host_delay": 300,
+    "notify_no_data": false,
+    "renotify_interval": 0
+  }
+}

@@ -1,0 +1,14 @@
+#instana-agent-service
+apiVersion: v1
+kind: Service
+metadata:
+  name: instana-agent-lb-service
+  namespace: instana-agent
+spec:
+  type: LoadBalancer
+  selector:
+    app.kubernetes.io/name: instana-agent
+  ports:
+  - name: http
+    port: 42699
+    targetPort: 42699

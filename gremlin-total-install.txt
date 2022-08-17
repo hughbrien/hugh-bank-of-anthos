@@ -1,0 +1,46 @@
+brew install speedscale/tap/speedctl
+
+http://*.amazonaws.com/
+
+
+helm install speedscale-operator speedscale/speedscale-operator \
+    -n speedscale \
+    --create-namespace \
+    --set apiKey=9ebec08a18aa2e61d8b6d10831f289d6e6bb6bd50128b \
+    --set clusterName=hugh-bank-of-anthos
+
+
+
+    helm install gremlin gremlin/gremlin --namespace gremlin \
+    --set gremlin.hostPID=true \
+    --set gremlin.container.driver=any \
+    --set gremlin.secret.managed=true \
+    --set gremlin.secret.type=secret \
+    --set gremlin.collect.processes=true \
+    --set gremlin.secret.teamID=<team ID>\
+    --set gremlin.secret.clusterID=bank_of_anthos \
+    --set gremlin.secret.teamSecret=<team secret ID>
+
+
+
+helm repo add gremlin https://helm.gremlin.com/
+kubectl create namespace gremlin
+helm install gremlin gremlin/gremlin --namespace gremlin \
+    --set gremlin.hostPID=true \
+    --set gremlin.container.driver=any \
+    --set gremlin.secret.managed=true \
+    --set gremlin.secret.type=secret \
+    --set gremlin.secret.clusterID=hugh-bank-demo \
+    --set gremlin.secret.teamID=a4aa6238-c6ed-470f-aa62-38c6ed770ff7 \
+    --set gremlin.secret.teamSecret=ca1c657c-154f-4456-9c65-7c154fb45646
+
+
+helm upgrade  gremlin gremlin/gremlin --namespace gremlin \
+    --set gremlin.hostPID=true \
+    --set gremlin.container.driver=any \
+    --set gremlin.secret.managed=true \
+    --set gremlin.secret.type=secret \
+    --set gremlin.secret.clusterID=hugh-bank-demo \
+    --set gremlin.secret.teamID=a4aa6238-c6ed-470f-aa62-38c6ed770ff7 \
+    --set gremlin.secret.teamSecret=ca1c657c-154f-4456-9c65-7c154fb45646
+

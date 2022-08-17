@@ -1,0 +1,14 @@
+#instana-agent-service
+apiVersion: v1
+kind: Service
+metadata:
+  name: instana-agent-service
+  namespace: instana-agent
+spec:
+  type: NodePort
+  selector:
+    app: instana-agent
+  ports:
+  - name: http
+    port: 42699
+    targetPort: 42699
